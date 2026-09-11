@@ -1,3 +1,6 @@
+<img width="1024" height="500" alt="image" src="https://github.com/user-attachments/assets/9d743403-333e-48e1-9af6-0406365d5fea" />
+
+
 # Incident Report: Data Destruction & Extortion on FINANCE-SRV03 (MySQL)
 
 **Incident ID:** `IR-2026-0910-FINANCE-SRV03`  
