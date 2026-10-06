@@ -85,7 +85,7 @@ The threat actor executed the following actions:
 
 ---
 
-## Root Cause Analysis & Attack Vector
+## Incident Root Cause and Threat Analysis
 
 1. **Primary Attack Vector (High Confidence):**  
    The root enabler of the incident was the direct exposure of the MySQL database service (TCP port 3306) to the public internet, paired with weak or blank default credentials on the <code>root</code> account. Telemetry indicates the compromise was driven by opportunistic, automated scanning scripts that systematically tested standard administrative accounts (such as <code>admin</code>, <code>sa</code>, and <code>root</code>) until gaining access, rather than a targeted intrusion.
