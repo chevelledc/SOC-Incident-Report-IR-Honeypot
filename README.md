@@ -232,8 +232,7 @@ The audit evidence showed queries and column references, but did not establish t
 | Exploitation of an exposed MySQL service, if exploitation is confirmed | `T1190` — Exploit Public-Facing Application |
 | Queries against the database's credentials table | `T1213` — Data from Information Repositories |
 | Destruction of databases and tables | `T1485` — Data Destruction |
-| Creation of a ransom table containing an extortion message | No direct mapping assigned; documented as observed extortion behavior |
-| Revocation of administrative database privileges | No direct mapping assigned; documented as observed privilege modification |
+| Creation of a ransom table containing an extortion message | `T1491.001` — Defacement:Internal Defacement |
 
 ---
 
