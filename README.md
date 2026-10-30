@@ -262,32 +262,40 @@ The investigation did not establish a direct connection between the RDP activity
 
 ## 🛡️ Incident Response & Remediation
 
-### 1. Containment
+### 1. Containment 
 
-- Restricted inbound TCP ports `3306` and `3389` through the Azure Network Security Group and firewall.
-- Limited administrative access to VPN and Azure Bastion paths.
-- Rotated and hardened database and Windows administrative credentials.
-- Captured disk and memory forensic snapshots before rebuilding the affected host.
+- Blocked outside access to the database and remote desktop to prevent further unauthorized access.
+- Made sure only authorized users could access the system through secure connections like VPN and Azure Bastion.
+- Changed important passwords to prevent the attackers from using stolen login details.
+- Saved copies of the affected system's files and memory for investigation before rebuilding it.
 
-### 2. Eradication and Recovery
+### 2. Eradication and Recovery 
 
-- Re-provisioned the MySQL environment from a clean, hardened base image.
-- Removed attacker-created extortion artifacts from the rebuilt environment.
-- Restored `cr_corp_01` from a verified pre-incident backup predating September 8, 2026, at 12:24 UTC.
-- Validated restored schema and data integrity before returning the database to service.
-- Audited database users, privileges, and Windows accounts for unauthorized changes.
+- Rebuilt the MySQL database using a clean and secure system.
+- Removed files and messages left behind by the attackers.
+- Restored the `cr_corp_01` database using a backup made before the attack on September 8, 2026, at 12:24 UTC.
+- Checked the restored database to make sure the information was complete and working properly.
+- Reviewed database and Windows accounts to make sure the attackers had not created unauthorized users or changed account permissions.
 
 ### 3. Recommended Preventive Controls
 
-- Keep MySQL off the public internet wherever possible.
-- Disable remote `root` login and enforce strong, unique credentials.
-- Apply least-privilege permissions to database accounts.
-- Alert on successful MySQL authentication from unexpected IP addresses.
-- Detect destructive SQL statements, including `DROP DATABASE`, `DROP TABLE`, and mass deletion operations.
-- Monitor for suspicious ransom-related database names and extortion messages.
-- Correlate failed logons with subsequent successful sessions and destructive SQL operations.
-- Retain authentication, database audit, endpoint, and network telemetry.
-- Regularly test database restoration and maintain protected, offline or immutable backups.
+- Avoid making the MySQL database accessible to anyone over the internet.
+- Do not allow remote access to the main administrator account, and use strong passwords.
+- Only give users access to the information and features they actually need.
+- Set up alerts whenever someone logs into the database from an unfamiliar location.
+- Monitor the database for unusual actions, such as deleting entire databases or large amounts of information.
+- Watch out for suspicious database names or messages that may be related to ransom attacks.
+- Monitor repeated failed login attempts, especially if they are followed by a successful login and suspicious activity.
+- Keep records of login activity, database changes, and system activity so suspicious behavior can be investigated.
+- Regularly test backups to make sure data can be recovered if another attack happens.
+
+---
+
+### Summary
+
+1. **Containment:** Stop the attackers from causing more damage.
+2. **Eradication and Recovery:** Remove the threat and restore the affected system.
+3. **Preventive Controls:** Put security measures in place to avoid another attack.
 
 ---
 
