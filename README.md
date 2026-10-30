@@ -214,13 +214,13 @@ The audit evidence showed queries and column references, but did not establish t
 | Bitcoin address | `bc1q0l7hr5v220f5qlqhjhg4p3jjqfkgudazzjnlkw` | Payment demand of 0.0108 BTC |
 | Contact email | `ak+2mrn@onionmail.org` | Contact information in ransom artifact |
 | Reference URL | `hxxps://spoo[.]me/mysql1` | Reference included in ransom artifact; not independently validated |
-| Campaign identifier | `2MRN` | Identifier in ransom artifact |
 | Ransom table | `RECOVER_YOUR_DATA.recover_your_data` | Created September 8, 2026, at 12:26:58 UTC |
 | MySQL source IP | `64.89.163.152` | Failed `root` authentication attempts |
 | MySQL source IP | `64.89.163.92` | Failed `root` authentication attempts |
 | RDP source IP | `37.27.141.182` | Failed `administrator` authentication attempts |
-
-*These indicators are associated with the observed incident and are not, by themselves, proof of attribution to a specific threat actor.*
+<img width="1607" height="407" alt="image" src="https://github.com/user-attachments/assets/58bce545-39db-43a1-af75-54621b5e5e35" />
+<img width="1597" height="635" alt="image" src="https://github.com/user-attachments/assets/aa0805ed-533e-4ba6-b235-c455d1ba1543" />
+<img width="1591" height="597" alt="image" src="https://github.com/user-attachments/assets/56e21a2c-d736-4ee0-a2bc-6d3425d1e82c" />
 
 ---
 
